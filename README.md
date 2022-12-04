@@ -1,14 +1,17 @@
-![img](./assets/preview.png)
-
-# fr33zmenu
-
-A multi-page fuzzy launcher for your terminal, written in Rust.
-
-Supports theming and multiple keybind schemes, including basic vim keybinds.
-
-[Installation](#installation) - [Usage](#usage) - [Integration](#integration) -
-[Configuration](#configuration)
-
+<div align="center">
+    <img src="./assets/preview.png" alt="preview" />
+    <h3>fr33zmenu</h3>
+    <p>A multi-page fuzzy launcher for your terminal, written in Rust.</p>
+    <p>Supports theming and multiple keybind schemes, including basic vim keybinds.</p>
+    <a href="#installation">Installation</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#usage">Usage</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#integration">Integration</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#configuration">Configuration</a>
+</div>
+    
 ## Installation
 
 If you don't have Rust, follow the installation instructions
@@ -102,7 +105,7 @@ menu are displayed underneath the menu's prompt.
 
 ``` toml
 [menus.programs]         # Define a new menu named "programs"
-order = -1               # Ensure it is the first menu
+order  = -1              # Ensure it is the first menu
 prompt = "launch -> "    # Give it a cool prompt
 
 [menus.programs.entries] # Define the menu's entries
@@ -118,7 +121,7 @@ prompt = "power -> "
 
 [menus.power.entries]
 shutdown = "shutdown now"
-reboot = "reboot"
+reboot   = "reboot"
 ```
 
 ## Keybinds

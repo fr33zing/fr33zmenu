@@ -1,3 +1,5 @@
+<div>&nbsp;</div>
+<div>&nbsp;</div>
 <div align="center">
     <img src="./assets/preview.png" alt="preview" />
     <h3>fr33zmenu</h3>
@@ -11,6 +13,8 @@
     &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="#configuration">Configuration</a>
 </div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
     
 ## Installation
 

@@ -1,0 +1,18 @@
+[menus.programs]         # Define a new menu named "programs"
+order = -1               # Ensure it is the first menu
+prompt = "launch -> "    # Give it a cool prompt
+
+[menus.programs.entries] # Define the menu's entries
+# ↓ Name      ↓ Value
+emacs      = "emacsclient -c -a emacs"
+librewolf  = "librewolf --browser"
+strawberry = "strawberry"
+gimp       = "gimp --new-instance"
+gajim      = "gajim --show"
+
+[menus.power]            # Another menu
+prompt = "power -> "
+
+[menus.power.entries]
+shutdown = "shutdown now"
+reboot = "reboot"

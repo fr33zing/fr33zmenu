@@ -1,0 +1,21 @@
+[package]
+name = "fr33zmenu"
+description = "A multi-page fuzzy launcher for your terminal."
+repository = "https://github.com/fr33zing/fr33zmenu"
+authors = ["fr33zing"]
+readme = "README.org"
+license = "GPL-3.0-or-later"
+edition = "2021"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.66"
+clap = { version = "4.0.27", features = ["derive"] }
+config = "0.13.2"
+crossterm = "0.25.0"
+csscolorparser = "0.6.2"
+fuzzy-matcher = "0.3.7"
+serde = { version = "1.0.148", features = ["derive"] }
+serde_with = "2.1.0"

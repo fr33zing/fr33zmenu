@@ -1,0 +1,12 @@
+[theme]
+prompt             = { fg = "#a6e3a1", attrs = "bold" }
+input              = { fg = "#cdd6f4" }
+entry_name         = { fg = "#cdd6f4" }
+entry_value        = { fg = "#6c7086" }
+entry_match        = { fg = "#74c7ec", attrs = "bold" }
+entry_hidden       = { fg = "#45475a" }
+entry_cursor       = { fg = "#1e1e2e", bg = "#cdd6f4", attrs = "bold" }
+entry_cursor_match = { fg = "#1e1e2e", bg = "#74c7ec", attrs = "bold" }
+menu_name          = { fg = "#f38ba8" }
+menu_cursor        = { fg = "#1e1e2e", bg = "#f38ba8", attrs = "bold" }
+overflow           = { fg = "#f9e2af", attrs = "bold" }

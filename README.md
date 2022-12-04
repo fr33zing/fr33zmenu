@@ -12,16 +12,6 @@
     <a href="#integration">Integration</a>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="#configuration">Configuration</a>
-    <div>&nbsp;</div>
-    <div>
-        <a href="https://crates.io/crates/fr33zmenu">
-            <img alt="crates.io" src="https://img.shields.io/crates/v/fr33zmenu" />
-        </a>
-        &nbsp;&nbsp;
-        <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
-            <img alt="GNU GPL 3.0 or later" src="https://img.shields.io/crates/l/fr33zmenu" />
-        </a>
-    </div>
 </div>
 <div>&nbsp;</div>
 <div>&nbsp;</div>

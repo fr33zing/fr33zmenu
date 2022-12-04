@@ -1,5 +1,3 @@
-#+BEGIN_CENTER
-
 [[./assets/preview.png]]
 
 * fr33zmenu
@@ -9,8 +7,6 @@ A multi-page fuzzy launcher for your terminal, written in Rust.
 Supports theming and multiple keybind schemes, including basic vim keybinds.
 
 [[#Installation][Installation]] - [[#Usage][Usage]] - [[#Integration][Integration]] - [[#Configuration][Configuration]]
-
-#+END_CENTER
 
 ** Installation
 

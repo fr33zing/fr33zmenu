@@ -358,11 +358,15 @@ impl Keybinds {
             cursor_x: 0,
             entry_cursor: false,
             entry_index: 0,
-            menu_index: state
-                .menu_index
-                .saturating_sub(1)
-                .checked_rem(state.menu_count)
-                .ok_or_else(|| anyhow!("zero menus"))?,
+            menu_index: if state.menu_index != 0 {
+                state
+                    .menu_index
+                    .saturating_sub(1)
+                    .checked_rem(state.menu_count)
+                    .ok_or_else(|| anyhow!("zero menus"))?
+            } else {
+                state.menu_count - 1
+            },
             ..state
         };
         Ok(state)

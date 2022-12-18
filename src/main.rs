@@ -107,7 +107,7 @@ fn interact(tty: &mut impl io::Write, args: &Args, config: &mut config::Config) 
                     execute!(tty, Clear(ClearType::All))?;
                 }
                 Action::Submit => {
-                    if state.input.len() > 0 && state.entry_count > 0 {
+                    if state.entry_count > 0 {
                         let selection = entries
                             .get(state.entry_index)
                             .ok_or_else(|| anyhow!("selection index out of bounds"))?;

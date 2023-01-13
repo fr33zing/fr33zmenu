@@ -124,7 +124,7 @@ fn draw_entries(
     let h: usize = size.1.try_into()?;
 
     for (i, entry) in entries.iter().enumerate() {
-        let y = i + 2;
+        let y = i + 4; // TODO what's the proper value here? where does it come from?
 
         if y < h {
             let selected = entry_cursor && i == entry_index;

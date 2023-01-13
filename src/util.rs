@@ -3,6 +3,7 @@
 
 use std::{fs, io};
 
+use crossterm::terminal;
 use fuzzy_matcher::clangd::fuzzy_indices;
 
 use crate::{config::Config, state::State};
@@ -58,7 +59,12 @@ pub(crate) fn count_selectable_entries(
     state: &State,
     entries: &Vec<(Option<(i64, Vec<usize>)>, String, String)>,
 ) -> usize {
-    if state.input.is_empty() {
+    let h: usize = match terminal::size() {
+        Ok(size) => size.1.into(),
+        Err(_) => return 0,
+    };
+
+    let count = if state.input.is_empty() {
         entries.len()
     } else {
         entries
@@ -68,5 +74,7 @@ pub(crate) fn count_selectable_entries(
                 None => None,
             })
             .count()
-    }
+    };
+
+    usize::min(count, h.saturating_sub(5))
 }

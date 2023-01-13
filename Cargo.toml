@@ -5,7 +5,7 @@ repository = "https://github.com/fr33zing/fr33zmenu"
 authors = ["fr33zing"]
 license = "GPL-3.0-or-later"
 edition = "2021"
-version = "0.1.4"
+version = "0.1.5"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

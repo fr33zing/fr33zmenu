@@ -128,10 +128,21 @@ fn interact(tty: &mut impl io::Write, args: &Args, config: &mut config::Config) 
 /// Writes the selected entry's value to stdout, or if `--exec` / `--exec-with` is provided,
 /// executes it.
 // TODO clean this up
-fn submit(tty: &mut impl io::Write, args: &Args, selection: String) -> Result<()> {
+fn submit(tty: &mut impl io::Write, args: &Args, mut selection: String) -> Result<()> {
     execute!(tty, Clear(ClearType::All), MoveTo(0, 0))?;
     if args.exec {
         // --exec
+
+        // check if config for item contains CLI-APP attribute
+        if selection.starts_with("CLI-APP") {
+            selection = selection.replace("CLI-APP ", "");
+            let mut keywords = selection.split(" ").collect::<Vec<&str>>();
+            let cmd = keywords[0];
+            keywords.remove(0);
+            Command::new(cmd).arg(keywords.join(" ")).spawn()?.wait()?;
+            return Ok(());
+        }
+        
         Command::new("nohup")
             .arg(selection)
             .stdin(Stdio::null())
